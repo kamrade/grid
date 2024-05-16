@@ -1,10 +1,12 @@
 import './App.css'
+import { Grid } from './components';
 
 function App() {
 
   return (
     <div>
-      <h1>This is the Grid Showcase</h1>
+      <h1>This is the Grid Showcase 0.0.3</h1>
+      <Grid></Grid>
     </div>
   )
 }

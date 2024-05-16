@@ -1,8 +1,39 @@
 {
-  "name": "grid",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@kamrade/grid",
+  "description": "Base table component",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "./dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamrade/grid.git"
+  },
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "author": "Denis Mikhailov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamrade/grid/issues"
+  },
+  "homepage": "https://github.com/kamrade/grid/issues#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,6 +41,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "20.12.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
