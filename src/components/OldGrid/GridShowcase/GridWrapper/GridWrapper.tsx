@@ -1,7 +1,7 @@
-import {useEffect, useState} from 'react';
-import {defaultColumnsSize} from "../CasesService/casesData";
-import {Grid} from "../Grid";
-import {useCases} from '../CasesService/CasesService';
+import { useEffect, useState } from 'react';
+import { defaultColumnsSize } from "~/services/CasesService/casesData";
+import { Grid } from "../Grid";
+import { useCases } from '~/services';
 
 export const GridWrapper = () => {
 

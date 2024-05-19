@@ -1,4 +1,4 @@
-import React, {createContext, useContext, ReactNode, useState} from 'react';
+import React, {createContext, ReactNode, useState} from 'react';
 import {
   casesData,
   CasesData,
@@ -7,7 +7,7 @@ import {
   sortDirectionDefault
 } from './casesData';
 import { randomIntFromInterval } from '~/helpers';
-import { SortDirection } from '../Grid/GridTypes';
+import { SortDirection } from '~/components/OldGrid/GridShowcase/Grid/GridTypes';
 import { orderBy } from 'lodash';
 
 
@@ -75,5 +75,3 @@ export const CasesProvider: React.FC<ICaseProviderProps> = (props) => {
     </CasesContext.Provider>
   )
 }
-
-export const useCases = () => useContext(CasesContext);

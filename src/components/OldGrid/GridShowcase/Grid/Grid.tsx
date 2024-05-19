@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classNames from "classnames/bind";
 import s from "./Grid.module.scss";
 import {IGridProps, IGridData} from './GridTypes';
-import {casesColumnsMap, minColumnSize} from '../CasesService/casesData';
+import {casesColumnsMap, minColumnSize} from '~/services/CasesService/casesData';
 import {GridColumnCaption} from "./GridColumnCaption/GridColumnCaption";
 
 const sx = classNames.bind(s);
