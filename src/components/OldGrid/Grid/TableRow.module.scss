@@ -1,0 +1,58 @@
+@import "src/styles/bootstrap/variables";
+@import "src/styles/bootstrap/mixins";
+@import "./Grid.global";
+
+.GridTableRow {
+  display: flex;
+  border-bottom: 1px solid transparent;
+  padding: $cellMarginY $cellMarginX;
+  position: relative;
+
+  &:hover {
+    .openButtonWrapper {
+      opacity: 1;
+    }
+  }
+
+  .openButtonWrapper {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    height: 32px;
+    top: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    padding: .675rem;
+
+    .openButton {
+      border-radius: 4px;
+      border: 1px solid $gray-200;
+      padding: .125rem .5rem;
+      background: $white;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: all .3s ease-in-out;
+      font-weight: 800;
+
+      &:hover {
+        background: map-get($theme-primary, bg100);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid $primary;
+        color: $primary;
+      }
+    }
+  }
+
+  &.GridTableRowBorder {
+    border-bottom: 1px solid $gray-200;
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &.GridTableRowStriped {
+    &:nth-child(2n) {
+      background-color: $gray-050;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "src/styles/bootstrap/variables";
+@import "src/styles/bootstrap/mixins";
+@import "./Grid.global";
+
+.GridTH {
+  padding: $cellPaddingY $cellPaddingX;
+  margin: $cellMarginY $cellMarginX;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-right: 1px solid transparent;
+  font-weight: 600;
+  color: $gray-600;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:hover {
+    background-color: $gray-050;
+
+    .GridTHControl {
+      opacity: 1;
+    }
+
+    .GridTHDragger {
+      opacity: 1;
+    }
+
+  }
+
+  &.GridTHCard {
+    border-radius: 8px;
+  }
+
+  .GridTHContent {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: .5rem;
+  }
+
+  .GridTHDragger {
+    opacity: 0;
+    cursor: move;
+    position: absolute;
+    right: .25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .3s ease-in-out;
+  }
+
+  .GridTHControl {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    cursor: e-resize;
+  }
+}

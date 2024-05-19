@@ -1,0 +1,18 @@
+@import "src/styles/bootstrap/variables";
+@import "src/styles/bootstrap/mixins";
+@import "./Grid.global";
+
+.GridWrapper {
+  padding-top: 4rem;
+  position: relative;
+}
+
+.GridHeader {
+  position: relative;
+}
+
+.setupColumns {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}

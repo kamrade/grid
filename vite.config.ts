@@ -23,5 +23,10 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
+  resolve: {
+    alias: {
+      "~": path.resolve(__dirname, "./src/")
+    }
+  },
   plugins: [react()],
 })

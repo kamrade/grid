@@ -1,0 +1,66 @@
+$danger: red;
+$gray-900: #333;
+$border-color: #bbb;
+
+.GridWrapper {
+  overflow: hidden;
+  text-align: left;
+  &.Error {
+    border-color: $danger;
+  }
+}
+
+.Grid {
+  width: 100%;
+  overflow-x: scroll;
+
+  .GridContent {
+    position: relative;
+  }
+
+  .GridPreloader, .GridError {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .GridPreloaderFast {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: $gray-900;
+  }
+
+  .GridError {
+    color: $danger;
+  }
+
+  .THead {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .GridContent {
+
+  }
+
+  .GridRow {
+    display: flex;
+    border-bottom: 1px dotted $border-color;
+  }
+
+  .GridCell {
+    padding: 1rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+
+}

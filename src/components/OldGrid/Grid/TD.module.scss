@@ -1,0 +1,93 @@
+@import "src/styles/bootstrap/variables";
+@import "src/styles/bootstrap/mixins";
+@import "./Grid.global";
+
+.GridTD {
+  padding: $cellPaddingY $cellPaddingX;
+  margin: $cellMarginY $cellMarginX;
+  position: relative;
+  border-right: 1px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+
+  // Border
+  &.GridTDBorder {
+    border-right: 1px solid $gray-200;
+  }
+
+  // Themes
+  &.GridThemeBase {
+    color: $gray-900;
+  }
+
+  &.GridThemePrimary {
+    color: map-get($theme-primary, text);
+  }
+
+  &.GridThemeSuccess {
+    color: map-get($theme-success, text);
+  }
+
+  &.GridThemeDanger {
+    color: map-get($theme-danger, text);
+  }
+
+  &.GridThemeMuted {
+    color: $text-muted;
+  }
+
+  // Has link
+  &.GridLink {
+    cursor: pointer;
+    &:hover {
+      .Link {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Inner
+  .GridTDContent {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .GridTDContentHidden {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  // Addons
+  .GridTDAddons {
+    position: relative;
+  }
+
+  .Link {
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+
+  .openDetails {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: .25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  &:hover {
+    &:first-of-type {
+      .openDetails {
+        display: block;
+      }
+    }
+  }
+}

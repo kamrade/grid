@@ -1,0 +1,13 @@
+@import "src/styles/bootstrap/variables";
+@import "src/styles/bootstrap/mixins";
+
+
+.GridTableHead {
+  position: relative;
+}
+
+.GridTableHeadContent {
+  display: flex;
+  border-bottom: 1px solid $gray-200;
+  position: relative;
+}
