@@ -7,7 +7,7 @@ import {
   sortDirectionDefault
 } from './casesData';
 import { randomIntFromInterval } from '~/helpers';
-import { SortDirection } from '~/components/OldGrid/GridShowcase/Grid/GridTypes';
+import type { SortDirection } from '~/components/Spreadsheet/GridTypes';
 import { orderBy } from 'lodash';
 
 

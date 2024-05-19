@@ -1,6 +1,6 @@
 import './App.css'
 import { Grid } from './components';
-import { GridWrapper } from '~/components/OldGrid/GridShowcase/GridWrapper/GridWrapper';
+import { GridWrapper } from '~/components/Spreadsheet';
 import { CasesProvider } from '~/services';
 
 function App() {
