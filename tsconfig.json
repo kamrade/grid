@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "~hooks": ["./src/hooks/*"],
-      "~/*": ["./src/*", "./dist/*", ""]
+      "~/*": ["./src/*", "./dist/*", ""],
+      "src/*": ["./src/*", "./dist/*", ""],
     }
   },
   "include": ["src"],

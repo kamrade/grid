@@ -1,6 +1,6 @@
 import './App.css'
 import { Grid } from './components';
-import { GridWrapper } from '~/components/Spreadsheet';
+import { SpreadsheetWrapper } from '~/components/Spreadsheet';
 import { CasesProvider } from '~/services';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <div>
         <h1 className='mb-3 page-title'>Grid</h1>
         <CasesProvider>
-          <GridWrapper />
+          <SpreadsheetWrapper />
         </CasesProvider>
       </div>
 

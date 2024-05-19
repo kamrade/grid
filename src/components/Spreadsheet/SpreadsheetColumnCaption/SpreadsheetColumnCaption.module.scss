@@ -1,20 +1,21 @@
 $gray-600: #777;
-$gray-100: #eee;
+$gray-100: #f1f3f5;
 
 .ColumnCaption {
-  font-size: 12px;
-  line-height: 1.5;
-  padding: 1rem 0;
+  font-size: 14px;
+  line-height: 20px;
   display: flex;
-  align-items: center;
   position: relative;
   color: $gray-600;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid $gray-100;
   
   .ColumnTitle {
     cursor: pointer;
-    padding: 2px 6px;
-    border-radius: 8px;
+    padding: 8px 8px;
+    border-radius: 18px;
     display: flex;
+    width: 100%;
     align-items: center;
     gap: 2px;
     transition: background .2s ease-in-out;

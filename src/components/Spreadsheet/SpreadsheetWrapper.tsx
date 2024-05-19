@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { defaultColumnsSize } from "~/services/CasesService/casesData";
-import { Grid } from "./Grid";
+import { Spreadsheet } from "~/components/Spreadsheet/Spreadsheet.tsx";
 import { useCases } from '~/services';
 
-export const GridWrapper = () => {
+export const SpreadsheetWrapper = () => {
 
   const [casesData, setCasesData] = useState<any>(null);
   const [isFetching, setIsFetching] = useState<boolean>(true);
@@ -27,7 +27,7 @@ export const GridWrapper = () => {
 
   return (
     <div className={'GridWrapper'}>
-      <Grid
+      <Spreadsheet
         setSortedBy={cases?.setSortedBy}
         sortedBy={cases?.getSortedBy()}
         sortDirection={cases?.getSortDirection && cases?.getSortDirection()}

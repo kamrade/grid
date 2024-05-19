@@ -1,4 +1,4 @@
-export interface IGridColumnCaption {
+export interface ISpreadsheetColumnCaption {
   columnTitle: string;
   columnCaption: string;
   initialColumnSize: number;

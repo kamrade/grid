@@ -1,10 +1,19 @@
 $danger: red;
+$gray-100: #f1f3f5;
+$gray-600: #555;
 $gray-900: #333;
-$border-color: #bbb;
+$border-color: #ddd;
+$grid-wrapper-border-radius: 20px;
 
 .GridWrapper {
   overflow: hidden;
   text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid $border-color;
+  border-radius: $grid-wrapper-border-radius;
+  padding: 0.25rem;
+
   &.Error {
     border-color: $danger;
   }
@@ -13,6 +22,16 @@ $border-color: #bbb;
 .Grid {
   width: 100%;
   overflow-x: scroll;
+  padding-bottom: 0.5rem;
+
+  &::-webkit-scrollbar {
+    height: 2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-600;
+    border-radius: 1rem;
+  }
 
   .GridContent {
     position: relative;
@@ -52,11 +71,16 @@ $border-color: #bbb;
 
   .GridRow {
     display: flex;
-    border-bottom: 1px dotted $border-color;
+    border-radius: 16px;
+    transition: all .3s ease-in-out;
+
+    &:nth-child(odd) {
+      background: $gray-100;
+    }
   }
 
   .GridCell {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

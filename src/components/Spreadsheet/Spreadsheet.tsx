@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import classNames from "classnames/bind";
-import s from "./Grid.module.scss";
-import {IGridProps, IGridData} from './GridTypes';
-import {casesColumnsMap, minColumnSize} from '~/services/CasesService/casesData';
-import {GridColumnCaption} from "./GridColumnCaption/GridColumnCaption";
 
+import { IGridProps, IGridData} from 'src/components/Spreadsheet/SpreadsheetTypes.ts';
+import { casesColumnsMap, minColumnSize } from 'src/services/CasesService/casesData';
+import { SpreadsheetColumnCaption } from "src/components/Spreadsheet/SpreadsheetColumnCaption/SpreadsheetColumnCaption";
+
+import s from "./Spreadsheet.module.scss";
 const sx = classNames.bind(s);
 
-export const Grid: React.FC<IGridProps> = ({
+export const Spreadsheet: React.FC<IGridProps> = ({
   defaultColumnsSize,
   columns,
   gridData,
@@ -65,7 +66,7 @@ export const Grid: React.FC<IGridProps> = ({
 
           <div className={s.THead}>
             {columns.map((columnCaption, i) =>
-              <GridColumnCaption
+              <SpreadsheetColumnCaption
                 key={i}
                 columnTitle={casesColumnsMap[columnCaption]}
                 columnCaption={columnCaption}
